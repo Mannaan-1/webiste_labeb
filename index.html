@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labib's Website</title>
+  <style>
+    /* Design System / CSS Variables */
+    :root {
+      --bg-color: #fcfbf9;
+      --card-bg: #ffffff;
+      --text-main: #2d2b2a;
+      --text-muted: #736f6d;
+      --accent: #16a34a; /* Hijau aksen */
+      --accent-hover: #15803d;
+      --accent-light: #f0fdf4;
+      --border-color: #e8e5e1;
+      --list-bg: #f8f6f2;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    /* Container Utama Tabel */
+    .main-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 24px;
+    }
+
+    /* Sidebar (Kolom Kiri) */
+    .sidebar {
+      width: 260px;
+      vertical-align: top;
+      background-color: var(--card-bg);
+      padding: 28px 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      display: block;
+      margin: 0 auto 16px auto;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.03);
+      border-color: var(--accent);
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 20px 0;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 10px 16px;
+      background-color: var(--list-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .nav-list a:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      transform: translateX(4px);
+    }
+
+    /* Konten Utama (Kolom Kanan) */
+    .content {
+      vertical-align: top;
+      background-color: var(--card-bg);
+      padding: 36px 40px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .page-title {
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .intro-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    .article-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-top: 28px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    p {
+      color: var(--text-main);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .zarathustra-quote {
+      font-style: italic;
+      color: var(--text-muted);
+      background-color: var(--list-bg);
+      border: 1px solid var(--border-color);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+      display: block;
+      font-size: 14px;
+    }
+
+    /* Styling Dalil */
+    .dalil-box {
+      background-color: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-top: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 20px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .dalil-box b {
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .dalil-box i {
+      color: var(--accent-hover);
+      font-size: 13px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <table class="main-table">
+    <tr>
+      <!-- Sidebar Kiri -->
+      <td class="sidebar">
+        <img class="profile-img" src="WhatsApp Image 2026-09-21 at 22.51.31 (1).jpeg" alt="Foto Labib">
+        <hr class="divider">
+        <ul class="nav-list">
+          <li><a href="profile.html">Profil</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="foto.html">Foto-foto</a></li>
+          <li><a href="puisi.html">Puisi Teman</a></li>
+          <li><a href="mailto:labibabdulmanan@gmail.com">Email Saya</a></li>
+        </ul>
+      </td>
+
+      <!-- Konten Utama Kanan -->
+      <td class="content">
+        <h1 class="page-title">SELAMAT DATANG DI WEBSITE LABIB</h1>
+        <hr class="divider">
+        <p class="intro-text">Saya ucapkan terima kasih atas kunjungan Anda ke website ini. Di sini Anda dapat melihat profil data diri serta kegiatan yang saya lakukan, beserta perenungan filosofis di bawah ini.</p>
+        
+        <h2 class="article-title">Risalah Kesunyian dan Sang Pencipta</h2>
+        
+        <p>Maka turunlah manusia dari bukit-bukit keheningan, dan ia berseru kepada jiwanya yang dahaga:</p>
+        
+        <span class="zarathustra-quote">
+          "Wahai jiwa yang tertidur dalam debu prasangka! Apakah engkau mengira dirimu adalah raja atas waktu, padahal engkau hanyalah musafir yang meniti bayang-bayang?"
+        </span>
+        
+        <p>Sesungguhnya, langit tidak diciptakan tanpa ukuran, dan bumi tidak dibentangkan tanpa kehendak. Sebagaimana firman Sang Pencipta Kebenaran:</p>
+        
+        <div class="dalil-box">
+          <b>"Dan tidaklah Aku menciptakan jin dan manusia melainkan agar mereka beribadah kepada-Ku."</b><br>
+          <i>(QS. Az-Zariyat: 56)</i>
+        </div>
+
+        <p>Manusia bertarung melawan bayangannya sendiri, meraba-raba dalam kegelapan duniawi, padahal Cahaya di atas Cahaya senantiasa memanggil dari kedalaman yang paling sunyi. Maka berjalanlah di atas muka bumi ini sebagai seorang asing, sebagaimana sabda Sang Nabi:</p>
+
+        <div class="dalil-box">
+          <b>"Jadilah engkau di dunia ini seakan-akan orang asing atau seorang pengembara."</b><br>
+          <i>(HR. Bukhari)</i>
+        </div>
+
+        <p>Bukan kekekalan di dunia yang dicari oleh mereka yang berakal, melainkan kepasrahan yang sempurna kepada Yang Maha Memiliki Jiwa. Barangsiapa mengenal kerendahan dirinya di hadapan Sang Khalik, maka ia telah menemukan ketinggian derajat yang sejati.</p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

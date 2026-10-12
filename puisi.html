@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puisi Teman - Labib Abdul Manan</title>
+  <style>
+    
+    :root {
+      --bg-color: #fcfbf9;
+      --card-bg: #ffffff;
+      --text-main: #2d2b2a;
+      --text-muted: #736f6d;
+      --accent: #16a34a; /* Hijau aksen */
+      --accent-hover: #15803d;
+      --accent-light: #f0fdf4;
+      --border-color: #e8e5e1;
+      --list-bg: #f8f6f2;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      border-radius: var(--radius);
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--text-main);
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 20px 0 24px 0;
+    }
+
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    
+    li {
+      background-color: var(--list-bg);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: all 0.2s ease;
+    }
+
+    li:hover {
+      border-color: var(--accent);
+      background-color: var(--accent-light);
+      transform: translateX(4px);
+    }
+
+    
+    .poem-img-wrapper {
+      position: relative;
+      width: 75px;
+      height: 75px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border-color);
+      margin-top: 2px;
+    }
+
+    .poem-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+      
+    .poem-img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(22, 163, 74, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    li:hover .poem-img-wrapper::after {
+      opacity: 1;
+    }
+
+    li:hover .poem-img-wrapper img {
+      transform: scale(1.1);
+    }
+
+    
+    .poem-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .poem-title {
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .poem-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .poem-author {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-hover);
+      margin-top: 2px;
+      font-style: normal;
+    }
+
+    
+    .back-btn-container {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background-color: var(--list-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Puisi Teman</h1>
+    <hr>
+    <ul>
+      <li>
+        <div class="poem-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=200" alt="Di Antara Ruang Jeda">
+        </div>
+        <div class="poem-content">
+          <span class="poem-title">Puisi 1: Di Antara Ruang Jeda</span>
+          <p class="poem-desc">"Di antara bising warna dunia, kau memilih tenang pada ruang jeda. Satu garis ditarik tanpa ragu, menyusun sunyi menjadi riuh yang padu."</p>
+          <span class="poem-author">— Ditulis oleh Rekan DKV</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="poem-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=200" alt="Pijar Layar & Presisi">
+        </div>
+        <div class="poem-content">
+          <span class="poem-title">Puisi 2: Pijar Layar & Presisi</span>
+          <p class="poem-desc">"Layar pijar dan cangkir dingin, mengejar presisi di batas piksel dan ingin. Setiap bentuk kau beri nyawa tanpa menyerah."</p>
+          <span class="poem-author">— Ditulis oleh Teman RPL</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="poem-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?q=80&w=200" alt="Menatap Bentuk">
+        </div>
+        <div class="poem-content">
+          <span class="poem-title">Puisi 3: Menatap Bentuk</span>
+          <p class="poem-desc">"Kesederhanaan bukan tentang kekurangan, tapi tentang menyisa apa yang punya arti. Seperti karya yang kau racik dengan hati."</p>
+          <span class="poem-author">— Ditulis oleh Sahabat Kopi</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="back-btn-container">
+      <a href="index.html" class="back-btn">&larr; Kembali ke Halaman Utama</a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Labib Abdul Manan</title>
+  <style>
+    /* Design System / CSS Variables dari index.html */
+    :root {
+      --bg-color: #fcfbf9;
+      --card-bg: #ffffff;
+      --text-main: #2d2b2a;
+      --text-muted: #736f6d;
+      --accent: #16a34a; /* Hijau aksen */
+      --accent-hover: #15803d;
+      --accent-light: #f0fdf4;
+      --border-color: #e8e5e1;
+      --list-bg: #f8f6f2;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Container Card Profil */
+    .profile-card {
+      background-color: var(--card-bg);
+      width: 100%;
+      max-width: 600px;
+      padding: 40px 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Judul Halaman */
+    .card-title {
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 16px 0 24px 0;
+    }
+
+    /* Tabel Data Pribadi */
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+    }
+
+    .profile-table tr {
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color 0.2s ease;
+    }
+
+    .profile-table tr:hover {
+      background-color: var(--accent-light);
+    }
+
+    .profile-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .profile-table td {
+      padding: 12px 12px;
+      font-size: 15px;
+    }
+
+    .label {
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: right;
+      width: 40%;
+      padding-right: 16px;
+    }
+
+    .value {
+      color: var(--text-main);
+      width: 60%;
+    }
+
+    /* Tombol Kembali */
+    .back-btn-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background-color: var(--list-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <h1 class="card-title">DATA PRIBADI</h1>
+    <hr class="divider">
+
+    <table class="profile-table">
+      <tr>
+        <td class="label">Nama:</td>
+        <td class="value">Labib Abdul Manan</td>
+      </tr>
+      <tr>
+        <td class="label">Tempat/Tanggal Lahir:</td>
+        <td class="value">Banjarnegara, 26 April 2010</td>
+      </tr>
+      <tr>
+        <td class="label">Agama:</td>
+        <td class="value">Islam</td>
+      </tr>
+      <tr>
+        <td class="label">Gol. Darah:</td>
+        <td class="value">-</td>
+      </tr>
+      <tr>
+        <td class="label">Pekerjaan:</td>
+        <td class="value">Pelajar</td>
+      </tr>
+      <tr>
+        <td class="label">Hobi:</td>
+        <td class="value">Membaca, Tidur</td>
+      </tr>
+    </table>
+
+    <div class="back-btn-container">
+      <a href="index.html" class="back-btn">&larr; Kembali ke Halaman Utama</a>
+    </div>
+  </div>
+
+</body>
+</html>

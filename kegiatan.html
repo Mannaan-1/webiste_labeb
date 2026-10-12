@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Kegiatan - Labib Abdul Manan</title>
+  <style>
+    
+    :root {
+      --bg-color: #fcfbf9;
+      --card-bg: #ffffff;
+      --text-main: #2d2b2a;
+      --text-muted: #736f6d;
+      --accent: #16a34a; /* Hijau aksen */
+      --accent-hover: #15803d;
+      --accent-light: #f0fdf4;
+      --border-color: #e8e5e1;
+      --list-bg: #f8f6f2;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      border-radius: var(--radius);
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--text-main);
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--border-color);
+      margin: 20px 0 24px 0;
+    }
+
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    
+    li {
+      background-color: var(--list-bg);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: all 0.2s ease;
+    }
+
+    li:hover {
+      border-color: var(--accent);
+      background-color: var(--accent-light);
+      transform: translateX(4px);
+    }
+
+    
+    .activity-img-wrapper {
+      position: relative;
+      width: 75px;
+      height: 75px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border-color);
+      margin-top: 2px;
+    }
+
+    .activity-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+     
+    .activity-img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(22, 163, 74, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    li:hover .activity-img-wrapper::after {
+      opacity: 1;
+    }
+
+    li:hover .activity-img-wrapper img {
+      transform: scale(1.1);
+    }
+
+    
+    .activity-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .activity-title {
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .activity-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    
+    .back-btn-container {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background-color: var(--list-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Daftar Kegiatan</h1>
+    <hr>
+    <ul>
+      <li>
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=200" alt="Belajar HTML CSS">
+        </div>
+        <div class="activity-content">
+          <span class="activity-title">Kegiatan 1: Belajar HTML dan CSS</span>
+          <p class="activity-desc">Mempelajari struktur pemformatan elemen web dasar menggunakan HTML5 serta teknik *styling* dan tata letak responsif dengan CSS3.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=200" alt="Website Pribadi">
+        </div>
+        <div class="activity-content">
+          <span class="activity-title">Kegiatan 2: Membuat Website Pribadi</span>
+          <p class="activity-desc">Merancang dan membangun situs portofolio pribadi berbasis tampilan minimalis untuk menampilkan data diri, karya, serta tulisan.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=200" alt="Kursus Online">
+        </div>
+        <div class="activity-content">
+          <span class="activity-title">Kegiatan 3: Mengikuti Kursus Online</span>
+          <p class="activity-desc">Menambah wawasan dan mengasah *skill* rekayasa perangkat lunak melalui berbagai materi interaktif di platform pembelajaran online.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=200" alt="Membaca Buku">
+        </div>
+        <div class="activity-content">
+          <span class="activity-title">Kegiatan 4: Membaca Buku Pemrograman</span>
+          <p class="activity-desc">Mendalami konsep logika, algoritma, serta *best practice* dalam penulisan kode melalui buku-buku literatur teknologi mutakhir.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class="activity-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=200" alt="Open Source">
+        </div>
+        <div class="activity-content">
+          <span class="activity-title">Kegiatan 5: Berpartisipasi dalam Proyek Open Source</span>
+          <p class="activity-desc">Berkontribusi secara aktif dalam pengembangan proyek terbuka di GitHub untuk melatih kolaborasi tim dan pemahaman alur kerja nyata.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="back-btn-container">
+      <a href="index.html" class="back-btn">&larr; Kembali ke Halaman Utama</a>
+    </div>
+  </div>
+
+</body>
+</html>

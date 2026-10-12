@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - David Joko</title>
+  <style>
+    /* Reset & CSS Variables (Tema Estetik & Minimalis dari Index) */
+    :root {
+      --bg-color: #fcfbf9;
+      --card-bg: #ffffff;
+      --text-main: #2d2b2a;
+      --text-muted: #736f6d;
+      --accent: #16a34a; /* Warna hijau aksen */
+      --accent-hover: #15803d;
+      --accent-light: #f0fdf4;
+      --border-color: #e8e5e1;
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      padding: 20px;
+    }
+
+    /* Container Utama */
+    .profile-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+      max-width: 600px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    /* Galeri Foto */
+    .photo-container {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Item Foto */
+    .photo-item {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* Overlay Warna Hijau (Fade-in langsung tanpa slide) */
+    .photo-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(22, 163, 74, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-item:hover::after {
+      opacity: 1;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Tombol Kembali ke Index */
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="profile-card">
+    <h1 class="section-title">Galeri Foto</h1>
+
+    <!-- Galeri Foto -->
+    <div class="photo-container">
+      <div class="photo-item">
+        <img src="WhatsApp Image 2026-09-21 at 22.51.31.jpeg" alt="Foto 1">
+      </div>
+
+      <div class="photo-item">
+        <img src="IMG_20260419_075425.jpg" alt="Foto 2">
+      </div>
+    </div>
+
+    <!-- Tombol Kembali ke Index -->
+    <a href="index.html" class="btn-back">
+      &larr; Kembali ke Beranda
+    </a>
+  </main>
+
+</body>
+</html>
